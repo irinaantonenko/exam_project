@@ -1,0 +1,251 @@
+// ========= Color ========
+// ========================= 
+
+$decor-color: #E8C300;
+$light-theme: #fff;
+$dark-theme: #000;
+$span-color: #333;
+$xxl: 1440px;
+$xl: 1380px;
+$lg: 1024px;
+$md: 696px;
+$sm: 425px;
+$xs: 320PX;
+
+// ========= Font ========
+// =========================
+
+    // === Open Sans ===
+        //  Regular
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../fonts/OpenSans/OpenSans-Regular/OpenSans-Regular.eot);
+    src: url(../fonts/OpenSans/OpenSans-Regular/OpenSans-Regular.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/OpenSans/OpenSans-Regular/OpenSans-Regular.woff) format('woff'),
+         url(../fonts/OpenSans/OpenSans-Regular/OpenSans-Regular.woff2) format('woff2'),
+         url(../fonts/OpenSans/OpenSans-Regular/OpenSans-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+        //  Bold
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../fonts/OpenSans/OpenSans-Bold/OpenSans-Bold.eot);
+    src: url(../fonts/OpenSans/OpenSans-Bold/OpenSans-Bold.eot#iefix) format('embedded-opentype'),
+         url(../fonts/OpenSans/OpenSans-Bold/OpenSans-Bold.woff) format('woff'),
+         url(../fonts/OpenSans/OpenSans-Bold/OpenSans-Bold.woff2) format('woff2'),
+         url(../fonts/OpenSans/OpenSans-Bold/OpenSans-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+    // == Dosis ==
+        // Bold
+
+@font-face {
+    font-family: 'Dosis';
+    src: url(../fonts/Dosis/Dosis-Bold/Dosis-Bold.eot);
+    src: url(../fonts/Dosis/Dosis-Bold/Dosis-Bold.eot#iefix) format('embedded-opentype'),
+            url(../fonts/Dosis/Dosis-Bold/Dosis-Bold.woff) format('woff'),
+            url(../fonts/Dosis/Dosis-Bold/Dosis-Bold.woff2) format('woff2'),
+            url(../fonts/Dosis/Dosis-Bold/Dosis-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+    // == Caption ==
+        // Regular
+
+@font-face {
+    font-family: 'Caption';
+    src: url(../fonts/Caption/PTSerifCaption-Regular.eot);
+    src: url(../fonts/Caption/PTSerifCaption-Regular.eot#iefix) format('embedded-opentype'),
+            url(../fonts/Caption/PTSerifCaption-Regular.woff) format('woff'),
+            url(../fonts/Caption/PTSerifCaption-Regular.woff2) format('woff2'),
+            url(../fonts/Caption/PTSerifCaption-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: $dark-theme;
+    @media (max-width: $xxl) {
+        max-width: 1440px;
+    }
+    @media (max-width: $xl) {
+        max-width: 1380px;
+    }
+    @media (max-width: $lg) {
+        max-width: 1024px;
+    }
+    @media (max-width: $md) {
+        max-width: 696px;
+    }
+    @media (max-width: $sm) {
+        max-width: 425px;
+    }
+    @media (max-width: $xs) {
+        max-width: 320px;
+    }
+
+}
+.content {
+    color: $light-theme;
+    width: 100%;
+    background-image: url(../images/section3/Background_image.png);
+    background-size: cover; 
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    font-family: 'Opensans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5em;
+    line-height: 1.17em;
+}
+.main {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 100px;
+    @media (max-width: $xl) {
+        flex-wrap: wrap;
+    }
+    @media (max-width: $lg) {
+        flex-wrap: wrap;
+    }
+    @media (max-width: $md) {
+        flex-wrap: wrap;
+    } 
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.photo {
+    position: relative; 
+    width: 30em;
+    height: 30em;
+    @media (max-width: $xl) {
+        width: 28em;
+        height: 28em;
+    }
+    @media (max-width: $lg) {
+        width: 25em;
+        height: 25em;
+    }
+    @media (max-width: $md) {
+        width: 20em;
+        height: 20em;
+    }
+    @media (max-width: $sm) {
+        width: 15em;
+        height: 15em;
+    }
+    @media (max-width: $xs) {
+        width: 10em;
+        height: 10em;
+    }
+}
+.photo__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    object-fit: cover;
+    object-position:center;
+    border-radius: 5px;
+}
+.photo:after {
+    content: "";
+    width: 250px;
+    height: 250px;
+    background: transparent;
+    border: 20px solid #E8C300;
+    border-radius: 5px;
+    position: absolute;
+    top: calc(50% - 125px);
+    left: -13%;
+    z-index: 1;
+    @media (max-width: $md) {
+        width: 180px;
+        height: 180px;
+    }
+    @media (max-width: $sm) {
+        width: 150px;
+        height: 150px;
+        top: 10%;
+        border: 15px solid #E8C300;
+    }
+    @media (max-width: $xs) {
+        width: 50px;
+        height: 50px;
+        top: 20%;
+        border: 10px solid #E8C300;
+    }
+}
+.title {
+    width: 100%;
+    max-width: 600px;
+    @media (max-width: $lg) {
+        word-wrap: break-word;
+        max-width: 500px;
+    }
+    @media (max-width: $md) {
+        word-wrap: break-word;
+        max-width: 400px;
+    }
+    @media (max-width: $sm) {
+        word-wrap: break-word;
+        max-width: 300px;
+    }
+    @media (max-width: $xs)  {
+        word-wrap: break-word;
+        max-width: 200px;
+    }
+}
+.text__title {
+    font-family: "Dosis",sans-serif;
+    font-size: 2.25rem;
+    line-height: 1.333;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+.text__title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 5px;
+    background-color: #E8C300;
+    position: absolute;
+    left: calc(50% - 30px);
+    bottom: -6px;
+    border-radius: 50px;
+}
+.subtext {
+    font-family: "OpenSans",sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.71;
+    text-align: center;
+}
+.subtext__weight {
+    display: block;
+    margin: 20px 0;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
