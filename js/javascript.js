@@ -183,9 +183,9 @@ function perfect(num) {
   }
   console.log(perfect(num));*/
 /*------------Task 7--------------*/
-/*let a = +prompt("enter the start range");
-let b = +prompt("enter the start range");
-let c = +prompt("enter the start range");
+/*let a = +prompt("enter the houres");
+let b = +prompt("enter the minutes");
+let c = +prompt("enter the seconds");
 function timeStr(a,b,c){
     if ( c == undefined) {
         let str = `${a}:${b}:00`;
@@ -202,3 +202,25 @@ function timeStr(a,b,c){
     } 
 }
 alert(timeStr(a,b,c));*/
+/*------------Task 8--------------*/
+/*let a = +prompt("enter the houres");
+let b = +prompt("enter the minutes");
+let c = +prompt("enter the seconds");
+function getSeconds(a, b, c) {
+    if (a == 0 && b == 0 && c != 0) {
+        return c;
+    } else if (a == 0 && b != 0 && c == 0) {
+        return (b * 60);
+    } else if (a != 0 && b == 0 && c == 0) {
+        return (a * 3600);
+    } else if (a != 0 && b != 0 && c == 0) {
+    return ((a * 3600) + (b * 60));
+    } else if (a != 0 && b != 0 && c != 0) {
+    return ((a * 3600) + (b * 60) + c);
+    } else if (a == 0 && b != 0 && c != 0) {
+        return ((b * 60) + c);
+    } else if (a != 0 && b == 0 && c != 0) {
+        return ((a * 3600) + c);
+    } 
+}
+console.log (getSeconds(a, b, c));*/
