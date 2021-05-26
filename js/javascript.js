@@ -105,7 +105,7 @@ switch(number) {
         else 
         alert ('коло не вміщається в квадрат');*/
 /*------------Task 9--------------*/ 
-let sport = prompt('Коли вперше на головній арені Ігор замайорів Олімпійський прапор? 1 - 1896 р. в Афінах; 2 - 1920 р. в Антверпені; 3 - 1900 р. в Парижі.');
+/*let sport = prompt('Коли вперше на головній арені Ігор замайорів Олімпійський прапор? 1 - 1896 р. в Афінах; 2 - 1920 р. в Антверпені; 3 - 1900 р. в Парижі.');
 let sea = prompt('Яке море вважається найтеплішим у світі? 1 - Червоне море; 2 - Аравійське море; 3 - Мертве море.');
 let islend = prompt('Який острів являється найбільшим за своєю площею на планеті? 1 - Гренландія; 2 - Мадагаскар 3; - Суматра.');
 let score = 0;
@@ -115,6 +115,90 @@ if (sport == 2)
         score += 2;
     if (islend == 1)
         score += 2;
-    alert('Твій бал за тест - ' + score);
+    alert('Твій бал за тест - ' + score);*/
 /*------------Task 10--------------*/
 
+
+/*----------Function--------------*/
+/*------------Task 1--------------*/
+/*let a = +prompt("enter first number");
+let b = +prompt("enter second number");
+function MinMax (a, b) {
+    if (a > b) {
+        return ('-1');
+    } else if (a < b) {
+        return ('1');
+    } else 
+    return ('0');
+}
+console.log (MinMax (a, b));*/
+/*------------Task 2--------------*/
+/*let n = +prompt("enter the number");
+function factorial (n) {
+    return n ? n * factorial (n-1) : 1;
+}
+alert (factorial (n));*/
+/*------------Task 3--------------*/
+/*let a = prompt("enter the number");
+let b = prompt("enter the number");
+let c = prompt("enter the number");
+function number(a, b, c) {
+    console.log(a + b + c);
+}
+number(a, b, c);*/
+/*------------Task 4--------------*/
+/*let a = prompt("enter the width");
+let b = prompt("enter the length");
+function sguare(a, b) {
+    if (a != 0 && b != 0) {
+        console.log(a * b);
+    } else if (a != 0 && b == 0) {
+    console.log(a * a);
+    } else 
+    console.log(b * b);
+}
+sguare(a, b);*/
+/*------------Task 5--------------*/
+/*let num = +prompt("enter the number");
+function perfect(num) {
+    for(var i = 1, n = 0; i < num; i++){
+      if(num % i === 0){
+        n += i; 
+      } 
+    }
+    return n === num;
+  }
+  console.log(perfect(num));*/
+/*------------Task 6--------------*/
+/*let a = +prompt("enter the start range");
+let b = +prompt("enter the end range");
+let num = +prompt("enter the number");
+function perfect(num) {
+    for(var i = 1, n = 0; i < num; i++){
+      if(num % i === 0 && num == a || num == b){
+        n += i; 
+      } 
+    }
+    return n === num;
+  }
+  console.log(perfect(num));*/
+/*------------Task 7--------------*/
+/*let a = +prompt("enter the start range");
+let b = +prompt("enter the start range");
+let c = +prompt("enter the start range");
+function timeStr(a,b,c){
+    if ( c == undefined) {
+        let str = `${a}:${b}:00`;
+        return str;
+    }
+    else if ( b == undefined) {
+        let str = `${a}:00:${0}`;
+        return str;
+    }
+    else {
+    let arr = [a, b, c];
+    let str = arr.join(':');
+    return str;
+    } 
+}
+alert(timeStr(a,b,c));*/
