@@ -183,25 +183,41 @@ function perfect(num) {
   }
   console.log(perfect(num));*/
 /*------------Task 7--------------*/
-/*let a = +prompt("enter the houres");
-let b = +prompt("enter the minutes");
-let c = +prompt("enter the seconds");
-function timeStr(a,b,c){
-    if ( c == undefined) {
-        let str = `${a}:${b}:00`;
-        return str;
+let a = prompt("enter the houres");
+let b = prompt("enter the minutes");
+let c = prompt("enter the seconds");
+function getTime() {
+    if (a == 0 && b == 0 && c >= 1 && c <= 9) {
+        return ('00:' + '00:' + '0' + c);
+    } else if (a == 0 && b == 0 && c >= 10 && c <= 60) {
+        return ('00:' + '00:' + c);
+    } else if (a == 0 && b >= 1 && b <= 9 && c == 0) {
+        return ('00:' + '0' + b + ':00');
+    } else if (a == 0 && b >= 10 && b <= 60 && c == 0) {
+        return ('00:' + b + ':00');
+    } else if (a >= 1 && a <= 9 && b == 0 && c == 0) {
+        return ('0' + a + ':00' + ':00');
+    } else if (a >= 10 && a <= 24 && b == 0 && c == 0) {
+        return (a + ':00' + ':00');
+    } else if (a >= 1 && a <= 9 && b >= 1 && b <= 9 && c == 0) {
+    return ('0' + a + ':0' + b + ':00');
+    } else if (a >= 10 && a <= 24 && b >= 10 && b <= 60 && c == 0) {
+        return (a + ':' + b + ':00');
+    } else if (a >= 1 && a <= 9 && b >= 1 && b <= 9 && c >= 1 && c <= 9) {
+        return ('0' + a + ':0' + b + ':0' + c);
+    } else if (a >= 10 && a <= 24 && b >= 10 && b <= 60 && c >= 10 && c <= 60) {
+        return (a + ':' + b + ':' + c);
+    } else if (a == 0 && b >= 1 && b <= 9 && c >= 1 && c <= 9) {
+        return ('00:' + '0' + b + ':0' + c);
+    } else if (a == 0 && b >= 10 && b <= 60 && c >= 10 && c <= 60) {
+        return ('00:' + b + ':'+ c); 
+    } else if (a >= 1 && a <= 9 && b == 0 && c >= 1 && c <= 9) {
+        return ('0' + a + ':00' + ':0' + c);
+    } else if (a >= 10 && a <= 24 && b == 0 && c >= 10 && c <= 60) {
+        return (a + ':00' + ':' + c);    
     }
-    else if ( b == undefined) {
-        let str = `${a}:00:${0}`;
-        return str;
-    }
-    else {
-    let arr = [a, b, c];
-    let str = arr.join(':');
-    return str;
-    } 
 }
-alert(timeStr(a,b,c));*/
+console.log(getTime());
 /*------------Task 8--------------*/
 /*let a = +prompt("enter the houres");
 let b = +prompt("enter the minutes");
