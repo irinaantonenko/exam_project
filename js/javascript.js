@@ -324,7 +324,7 @@ let time = {
   seconds: 17,
   showTime: function() {
     alert(`${this.hours}:${this.minutes}:${this.seconds}`);
-  },
+},
   addSeconds: function(seconds) {
     if (seconds <= 0) {
       alert("You entered incorrect time!");
@@ -351,17 +351,15 @@ let time = {
     if (hours <= 0) {
       alert("You entered incorrect time!");
     } else if (hours + this.hours >= 24) {
-      this.hours = (this.hours + hours) % 24;
+      this.hours = (this.hours + hours);
     } else {
       this.hours += hours;
     }
   }
 };
-
-time.showTime();
 time.addHours(25);
 time.showTime();
-time.addMinutes(120);
+time.addMinutes(2);
 time.showTime();
-time.addSeconds(360);
+time.addSeconds(20);
 time.showTime();
