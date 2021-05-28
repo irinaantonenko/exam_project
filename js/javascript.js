@@ -183,7 +183,7 @@ function perfect(num) {
   }
   console.log(perfect(num));*/
 /*------------Task 7--------------*/
-let a = prompt("enter the houres");
+/*let a = prompt("enter the houres");
 let b = prompt("enter the minutes");
 let c = prompt("enter the seconds");
 function getTime() {
@@ -217,7 +217,7 @@ function getTime() {
         return (a + ':00' + ':' + c);    
     }
 }
-console.log(getTime());
+console.log(getTime());*/
 /*------------Task 8--------------*/
 /*let a = +prompt("enter the houres");
 let b = +prompt("enter the minutes");
@@ -240,3 +240,128 @@ function getSeconds(a, b, c) {
     } 
 }
 console.log (getSeconds(a, b, c));*/
+
+
+/*----------Objects--------------*/
+/*------------Task 1--------------*/
+/*let car = {
+  manufacturer: "Japan",
+  model: "Mitsubishi",
+  issueAge: 1979,
+  averageSpeed: 100,
+showInformation: function() {
+    document.write(
+      "Manufacturer: " +
+        car.manufacturer +
+        "\nModel: " +
+        car.model +
+        "\nAge of issue: " +
+        car.issueAge +
+        "\nAverage Speed: " +
+        car.averageSpeed +
+        "km/h"
+    );
+},
+countingTime: function(distance) {
+    if (distance % 400 != 0) {
+    return distance / this.averageSpeed + Math.floor(distance / 400);
+    } else if (distance % 400 == 0) {
+    return distance / this.averageSpeed + Math.floor(distance / 400) - 1;
+    }
+}
+};
+car.showInformation();
+let hours = car.countingTime(1200);
+document.write("You need " + hours + " hours to get to that distance!");*/
+/*------------Task 2--------------*/
+/*let fraction = {
+  nominator: 1,
+  denominator: 2,
+  addition: function(nominator, denominator) {
+    let sum = this.nominator / this.denominator + this.nominator / this.denominator;
+    alert("Sum of fractions is " + sum);
+  },
+  subtruction: function(nominator, denominator) {
+    let subtr = this.nominator / this.denominator - this.nominator / this.denominator;
+    alert(" Subtruction is: " + subtr);
+  },
+  product: function(nominator, denominator) {
+    let product_ =
+      (this.nominator / this.denominator) * (this.nominator / this.denominator);
+    alert("Product is " + product_);
+  },
+  division: function(nominator, denominator) {
+    let div = (this.nominator / this.denominator) / (this.nominator / this.denominator);
+    alert("Division of these fractions is " + div);
+  }
+};
+
+let nominator, denominator;
+fraction.addition(nominator, denominator);
+fraction.subtruction(nominator, denominator);
+fraction.division(nominator, denominator);
+fraction.product(nominator, denominator);*/
+
+
+// Задание 3
+// Создать объект, описывающий время (часы, минуты, секунды), и следующие функции для работы с этим объектом.
+// 1. Функция вывода времени на экран.
+// 2. Функция изменения времени на переданное количество
+// секунд.
+// 3. Функция изменения времени на переданное количество
+// минут.
+// 4. Функция изменения времени на переданное количество
+// часов.
+// Учтите, что в последних 3-х функциях, при изменении одной
+// части времени, может измениться и другая. Например: если ко
+// времени «20:30:45» добавить 30 секунд, то должно получиться
+// «20:31:15», а не «20:30:75».
+
+
+let time = {
+  hours: 12,
+  minutes: 45,
+  seconds: 17,
+  showTime: function() {
+    alert(`${this.hours}:${this.minutes}:${this.seconds}`);
+  },
+  addSeconds: function(seconds) {
+    if (seconds <= 0) {
+      alert("You entered incorrect time!");
+    } else if (seconds + this.seconds >= 60) {
+      let differenceMin = Math.floor((this.seconds + seconds) / 60);
+      this.seconds = (this.seconds + seconds) % 60;
+      this.addMinutes(differenceMin);
+    } else {
+      this.seconds += seconds;
+    }
+  },
+  addMinutes: function(minutes) {
+    if (minutes <= 0) {
+      alert("You entered incorrect time!!!");
+    } else if (this.minutes + minutes >= 60) {
+      let differenceHours = Math.floor((this.minutes + minutes) / 60);
+      this.minutes = (this.minutes + minutes) % 60;
+      this.addHours(differenceHours);
+    } else {
+      this.minutes += minutes;
+    }
+  },
+  addHours: function(hours) {
+    if (hours <= 0) {
+      alert("You entered incorrect time!");
+    } else if (hours + this.hours >= 24) {
+      this.hours = (this.hours + hours) % 24;
+    } else {
+      this.hours += hours;
+    }
+  }
+};
+
+time.showTime();
+time.addHours(25);
+time.showTime();
+time.addMinutes(120);
+time.showTime();
+time.addSeconds(360);
+time.showTime();
