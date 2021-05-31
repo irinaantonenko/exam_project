@@ -248,7 +248,7 @@ console.log (getSeconds(a, b, c));*/
   manufacturer: "Japan",
   model: "Mitsubishi",
   issueAge: 1979,
-  averageSpeed: 100,
+  averageSpeed: 200,
 showInformation: function() {
     document.write(
       "Manufacturer: " +
@@ -263,10 +263,10 @@ showInformation: function() {
     );
 },
 countingTime: function(distance) {
-    if (distance % 400 != 0) {
-    return distance / this.averageSpeed + Math.floor(distance / 400);
-    } else if (distance % 400 == 0) {
-    return distance / this.averageSpeed + Math.floor(distance / 400) - 1;
+    if (distance % (this.averageSpeed * 4) != 0) {
+    return distance / this.averageSpeed + Math.floor(distance / (this.averageSpeed * 4));
+    } else if (distance % (this.averageSpeed * 4) == 0) {
+    return distance / this.averageSpeed + Math.floor(distance / (this.averageSpeed * 4)) - 1;
     }
 }
 };
@@ -302,23 +302,9 @@ fraction.subtruction(nominator, denominator);
 fraction.division(nominator, denominator);
 fraction.product(nominator, denominator);*/
 
+/*------------Task 3--------------*/
 
-// Задание 3
-// Создать объект, описывающий время (часы, минуты, секунды), и следующие функции для работы с этим объектом.
-// 1. Функция вывода времени на экран.
-// 2. Функция изменения времени на переданное количество
-// секунд.
-// 3. Функция изменения времени на переданное количество
-// минут.
-// 4. Функция изменения времени на переданное количество
-// часов.
-// Учтите, что в последних 3-х функциях, при изменении одной
-// части времени, может измениться и другая. Например: если ко
-// времени «20:30:45» добавить 30 секунд, то должно получиться
-// «20:31:15», а не «20:30:75».
-
-
-let time = {
+/*let time = {
   hours: 12,
   minutes: 45,
   seconds: 17,
@@ -363,3 +349,120 @@ time.addMinutes(2);
 time.showTime();
 time.addSeconds(20);
 time.showTime();
+*/
+
+/*----------Arrays--------------*/
+/*------------Task 1--------------*/
+/*let listShop = [
+    { nameProduct: "pear", count: "10", isBuy: true },
+    { nameProduct: "peach", count: "6", isBuy: true },
+    { nameProduct: "tomato", count: "8", isBuy: false },
+    { nameProduct: "potato", count: "20", isBuy: true },
+    { nameProduct: "apple", count: "3", isBuy: false },
+  ];
+let showProducts = function() {
+    listShop.sort(function(a, b) {
+    return b.isBuy - a.isBuy;
+});
+let i = 0;
+for (let product of listShop) {
+    console.log(
+    `Product# ${i} ${product.nameProduct}, ${product.count}, ${product.isBuy}`
+    );
+i++;
+}
+console.log("\n");
+};
+let addProduct = function(Product) {
+let count = 0;
+for (let i = 0; i < listShop.length; i++) { 
+    if (listShop[i].nameProduct === Product) {
+    count = i;
+    }
+}
+if (count === 0) {
+    listShop[listShop.length - 1] = {
+    nameProduct: Product,
+    count: "1",
+    isBuy: true
+};
+    console.log("count === 0");
+} else {
+    listShop[count].count = Number(listShop[count].count);
+    listShop[count].count += 1;
+    }
+};
+let buyProduct = function(myProduct) {
+let count = 0;
+myProduct = String(myProduct);
+for (let i = 0; i < listShop.length; i++) {
+    if (listShop[i].nameProduct === myProduct) {
+    count = i;
+    }
+}
+
+if (count === 0) {
+    console.log(`Don't have this product: ${myProduct}`);
+} else {
+    listShop[count].isBuy = true;
+    }
+};
+showProducts(listShop);
+addProduct("peach");
+showProducts(listShop);
+buyProduct("tomato");
+showProducts(listShop);*/
+/*let chequeShop = [
+    { productName: "bread", count: "3", price: "5" },
+    { productName: "milk", count: "2", price: "3" },
+    { productName: "sausage", count: "4", price: "7" },
+    { productName: "fish", count: "5", price: "12" },
+    { productName: "yoghurt", count: "5", price: "4" }
+];
+let showCheque = function() {
+for (let info of chequeShop) {
+    console.log(
+    `Name: ${info.productName}, Count: ${info.count}, Price: ${info.price}`
+    );
+}
+console.log("\n");
+};
+let sumOfPurchase = function() {
+let sum = 0;
+for (let info of chequeShop) {
+    info.price = Number(info.price);
+    sum += info.price;
+}
+return sum;
+};
+
+let getExpensivePurchase = function() {
+let minPrice = 0;
+for (let info of chequeShop) {
+    info.price = Number(info.price);
+    if (info.price > minPrice) {
+    minPrice = info.price;
+    }
+}
+return minPrice;
+};
+let averagePriceOfProduct = function() {
+let averagePrice = 0;
+let count = 0;
+for (let i = 0; i < chequeShop.length; ++i) {
+    chequeShop[i].price = Number(chequeShop[i].price);
+    averagePrice += chequeShop[i].price;
+    count++;
+}
+averagePrice /= count;
+return averagePrice;
+};
+showCheque();
+let sum = sumOfPurchase();
+console.log(`Sum of purchase is: ${sum}`);
+
+let maxPrice = getExpensivePurchase();
+console.log(`Max price is: ${maxPrice}`);
+
+let averagePrise = averagePriceOfProduct();
+console.log(`Averagge price is: ${averagePrise}`);*/
