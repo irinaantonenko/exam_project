@@ -466,3 +466,58 @@ console.log(`Max price is: ${maxPrice}`);
 
 let averagePrise = averagePriceOfProduct();
 console.log(`Averagge price is: ${averagePrise}`);*/
+/*let content = [
+    {
+        title: 'Toyota Lorem',
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam accusamus, repellat rem vitae in neque atque nulla sed dolores ut molestiae veniam delectus repudiandae quia? Sequi impedit at voluptate suscipit.Placeat ",
+        year: '2016',
+        brands: 'Toyota',
+        price: '10000'
+    },
+    {
+        title: 'Ford 480',
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam accusamus, repellat rem vitae in neque atque nulla sed dolores ut molestiae veniam delectus repudiandae quia? Sequi impedit at voluptate suscipit.Placeat ",
+        year: '2014',
+        brands: 'Ford',
+        price: '7000'
+    },
+    {
+        title: 'Toyota 363',
+        description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam accusamus, repellat rem vitae in neque atque nulla sed dolores ut molestiae veniam delectus repudiandae quia? Sequi impedit at voluptate suscipit.Placeat ",
+        year: '2016',
+        brands: 'Toyota',
+        price: '6000'
+    },
+    {
+        title: 'MERCEDES-Benz GLK25',
+        description: "The car from Canada MERCEDES-Benz GLK25  2.1 L Diesel has appeared on sale  . All-wheel drive car with a 2.1-liter diesel engine. The car after the accident with a mileage of  190656 km .",
+        year: '2020',
+        brands: 'MERCEDES',
+        price: '21000'
+    },
+    {
+        title: 'Hyundai Sonata',
+        description: "A car from the USA Hyundai Sonata 2.4 L Gasoline appeared on sale  . Front-wheel drive car with a 2.4-liter gasoline engine. The car after the accident with a mileage of 117560  ml . ",
+        year: '2014',
+        brands: 'Hyundai',
+        price: '8000'
+    },
+    {
+        title: 'Volkswagen Tiguan',
+        description: "The car from the USA Volkswagen Tiguan 2.0 L Gasoline has appeared on sale  . All-wheel drive car with a 2.0-liter gasoline engine. The car after the accident with a mileage of  59568 ml .  ",
+        year: '2013',
+        brands: 'Volkswagen',
+        price: '9500'
+    },
+    {
+        title: 'Ford Focus Se',
+        description: "Buy a car from the USA  Ford Focus Se at the best price in Rivne only on  USA-CARS.SHOP . USA-CARS.SHOP - your car from the USA! Delivery of a car from the USA to Exactly, to buy a car from the USA to Exactly, a car from the USA under the order Exactly.",
+        year: '2015',
+        brands: 'Ford',
+        price: '5890'
+    }
+]
+function yourSort(arr, year) {
+    return arr.sort
+}*/
+
